@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS properties</title>
+  </head>
+  <body>
+    <h1>CSS properties demo</h1>
+    <div>
+      <h2>Font-size</h2>
+
+      <h3>Absolute Units</h3>
+      <p style="font-size: 12px">
+        1 px is 1/96th of an inch, not the pixel of the screen of the viewing
+        device Don't have spaces in-between the values and the CSS units like
+        this: "12 px", rather "12px"
+      </p>
+      <p style="font-size: 0.5cm">Half a centimeter font-size</p>
+
+      <h3>Relative Units</h3>
+      <div style="font-size: 40px">
+        <p style="font-size: 0.5em; border: 0.25em solid black">
+          em is relative to the font-size of the parent element if we're using
+          it for font properties. If we're using em for anything that's not font
+          related, then it's relative to this element's font-size. The element's
+          font-size is 0.5em x 40px = 20px The border (non-font property) is:
+          0.25em x (0.5em x 40px) 0.25 x 20px 5px
+        </p>
+      </div>
+      <p style="font-size: 1.5rem">
+        If the root element's (html-element) font-size is 16px, then 1.5rem x
+        16px
+      </p>
+
+      <h2>Color</h2>
+      <div>
+        <p style="color: peru">Predefined color name</p>
+        <p style="color: #cd853f">Hex color code</p>
+        <p style="color: rgb(205, 133, 63)">rgb</p>
+        <p style="color: rgba(205, 133, 63, 0.5)">rgba</p>
+      </div>
+
+      <h2>Text Decoration</h2>
+      <div>
+        <p style="text-decoration: underline">underline</p>
+        <p style="text-decoration: overline">overline</p>
+        <p style="text-decoration: line-through">line-through</p>
+      </div>
+
+      <h2>Width</h2>
+      <div>
+        <p style="width: 200px; background-color: #aaaa;">
+          200px wide
+          width only applies to the content, not the paddings or the margin
+        </p>
+      </div>
+
+      <div style="width: 400px; border: 2px solid black">
+        <div style="width: 50%;background-color:hotpink">
+          Percentage units are relative to parent element's value of the same property as the same property
+          50% of 400px = 200px
+        </div>
+      </div>
+      <div style="width: 50vw;background-color:khaki">
+        vw is relative to the viewport's width, range is from 0-100
+        1 unit of vw is 1% of the viewport's width
+      </div>
+
+      <h2>Height</h2>
+      <div style="height: 20px; background-color: #aaa;">
+        20px high
+      </div>
+
+      <div style="height: 100px; border: 2px solid black">
+        <div style="height: 50%;background-color:hotpink">
+          Percentage units are relative to parent element's value of the same property as the same property
+          50% of 100px = 50px
+        </div>
+      </div>
+      <div style="height: 50vh;background-color:khaki">
+        vh is relative to the viewport's height, range is from 0-100
+        1 unit of vh is 1% of the viewport's height
+      </div>
+
+      <h2>Text-Align</h2>
+      <div style="border: 2px solid black">
+        <p style="text-align: left;">left-aligned</p>
+        <p style="text-align: right;">right-aligned</p>
+        <p style="text-align: center;">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti nesciunt error tempore possimus quo atque veniam sed dignissimos sunt ex?
+        </p>
+        <p style="text-align: justify;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolores, labore quos expedita inventore aperiam ipsa dolor illum. Consequuntur aspernatur libero dolor illum, accusamus repellendus atque. Quaerat voluptatum, quis recusandae, enim voluptates ipsa magnam nostrum, officiis ut optio corporis nisi!
+        </p>
+      </div>
+
+      <h2>Borders</h2>
+      <div style="border: 2px solid black">Hi</div>
+      <br>
+      <div style="border: 2px dotted blue">Hi</div>
+      <br>
+      <div style="border: 2px dashed blueviolet">Hi</div>
+
+      <h2>Opacity/Transparency</h2>
+      <div>
+        <p>Opacity (0-1) applies to the entire element (background and text)</p>
+        <p style="opacity: .5">50% opacity</p>
+        <p style="opacity: 1">opaque</p>
+      </div>
+
+      <h2>background</h2>
+      <div style="background-color: darksalmon">Background color</div>
+      <div style="background-image: url('https://images.freeimages.com/images/large-previews/647/snowy-mountain-1378865.jpg'); height: 100vh">Background image</div>
+      <div style="background-image: url('https://images.freeimages.com/images/large-previews/647/snowy-mountain-1378865.jpg'); height: 100vh; background-size: contain;">Background contain and repeat</div>
+      <div style="background-image: url('https://images.freeimages.com/images/large-previews/647/snowy-mountain-1378865.jpg'); height: 100vh; background-size: contain; background-repeat: no-repeat;">Background contain and no repeat</div>
+    </div>
+  </body>
+</html>
